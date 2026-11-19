@@ -1,0 +1,17 @@
+__pycache__/
+report_preview/
+.venv*/
+.python/
+*.egg-info/
+.ruff_cache/
+build/
+docs/_build/
+dist/
+.secrets/
+*.hash
+*.hash.lock
+resultaten/
+plots/
+configs/.history/
+configs/*.json.lock
+AGENTS.md

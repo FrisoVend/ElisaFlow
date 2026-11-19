@@ -1,0 +1,58 @@
+{
+    "Qkoorts_IgM.skax": {
+        "lot_number": "ER0011",
+        "measurement": {
+            "mode": "single",
+            "reference_wavelength_nm": 620
+        },
+        "calculation": {
+            "method": "formula",
+            "expression": "sample / grens",
+            "references": {
+                "grens": "Grens"
+            },
+            "response_scale": "blank_corrected"
+        },
+        "result": {
+            "label": "Ratio"
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Positief": {
+                        "extinction": {
+                            "min": 0.49,
+                            "response_scale": "blank_corrected"
+                        }
+                    },
+                    "Grens": {
+                        "extinction": {
+                            "min": 0.21,
+                            "max": 0.84,
+                            "response_scale": "blank_corrected"
+                        }
+                    },
+                    "Negatief": {
+                        "result": {
+                            "max": 0.9
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.25,
+                        "response_scale": "raw"
+                    }
+                }
+            }
+        },
+        "report": {
+            "extinction_decimals": 3,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "result_decimals": 1,
+            "calibration_decimals": 1
+        }
+    }
+}

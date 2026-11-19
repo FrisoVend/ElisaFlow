@@ -1,0 +1,57 @@
+{
+    "IA-2_as.skax": {
+        "lot_number": "260205",
+        "measurement": {
+            "mode": "single"
+        },
+        "calculation": {
+            "method": "calibration",
+            "fit_model": "4pl",
+            "weighting_exponent": 2.0,
+            "concentration_range": [
+                7.5,
+                4000.0
+            ],
+            "response_scale": "raw"
+        },
+        "result": {
+            "label": "Conc",
+            "unit": "U/ml"
+        },
+        "report": {
+            "result_decimals": 1,
+            "extinction_decimals": 3,
+            "calibration_decimals": 1,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "show_result_cv": true
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Positief": {
+                        "result": {
+                            "min": 80.0,
+                            "max": 160.0
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.2,
+                        "response_scale": "raw"
+                    }
+                },
+                "standards": {
+                    "350.0": {
+                        "extinction": {
+                            "min": 1.2,
+                            "response_scale": "blank_corrected"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

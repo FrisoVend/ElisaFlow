@@ -1,0 +1,51 @@
+{
+    "Dengue_NS1_as.skax": {
+        "lot_number": "E251213AA",
+        "measurement": {
+            "mode": "single",
+            "reference_wavelength_nm": 620
+        },
+        "calculation": {
+            "method": "formula",
+            "expression": "sample / grens",
+            "references": {
+                "grens": "Grens"
+            },
+            "response_scale": "raw"
+        },
+        "result": {
+            "label": "Ratio"
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Positief": {
+                        "result": {
+                            "min": 2.0,
+                            "max": 5.4
+                        }
+                    },
+                    "Negatief": {
+                        "result": {
+                            "max": 0.7
+                        }
+                    },
+                    "Grens": {
+                        "extinction": {
+                            "min": 0.14,
+                            "response_scale": "raw"
+                        }
+                    }
+                }
+            }
+        },
+        "report": {
+            "extinction_decimals": 3,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "result_decimals": 1,
+            "calibration_decimals": 1
+        }
+    }
+}

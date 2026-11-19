@@ -1,0 +1,59 @@
+{
+    "ZnT8_as.skax": {
+        "lot_number": "FZTE196",
+        "measurement": {
+            "mode": "single"
+        },
+        "calculation": {
+            "method": "calibration",
+            "fit_model": "quadratic",
+            "weighting_exponent": 2.0,
+            "response_scale": "raw"
+        },
+        "result": {
+            "label": "Conc",
+            "unit": "U/ml"
+        },
+        "report": {
+            "result_decimals": 1,
+            "extinction_decimals": 3,
+            "calibration_decimals": 1,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "show_result_cv": true
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Controle1": {
+                        "result": {
+                            "min": 30.0,
+                            "max": 88.0
+                        }
+                    },
+                    "Controle2": {
+                        "result": {
+                            "min": 90.0,
+                            "max": 270.0
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.2,
+                        "response_scale": "raw"
+                    }
+                },
+                "standards": {
+                    "500.0": {
+                        "extinction": {
+                            "min": 2.0,
+                            "response_scale": "blank_corrected"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

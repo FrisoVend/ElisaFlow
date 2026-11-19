@@ -1,0 +1,48 @@
+{
+    "AP50.skax": {
+        "lot_number": "10000",
+        "measurement": {
+            "mode": "single"
+        },
+        "calculation": {
+            "method": "formula",
+            "expression": "100 * (sample - negative) / (positive - negative)",
+            "references": {
+                "positive": "Positief",
+                "negative": "Negatief"
+            },
+            "response_scale": "blank_corrected"
+        },
+        "result": {
+            "label": "Score",
+            "unit": "%"
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Positief": {
+                        "extinction": {
+                            "min": 1.0,
+                            "response_scale": "blank_corrected"
+                        }
+                    },
+                    "Negatief": {
+                        "extinction": {
+                            "max": 0.2,
+                            "response_scale": "blank_corrected"
+                        }
+                    }
+                }
+            }
+        },
+        "report": {
+            "extinction_decimals": 3,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "result_decimals": 1,
+            "calibration_decimals": 1,
+            "show_result_cv": false
+        }
+    }
+}

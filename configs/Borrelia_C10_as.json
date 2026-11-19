@@ -1,0 +1,79 @@
+{
+    "Borellia_C10_as.skax": {
+        "lot_number": "25070204",
+        "measurement": {
+            "mode": "single"
+        },
+        "calculation": {
+            "method": "formula",
+            "expression": "sample / (kalibratie * 0.40)",
+            "references": {
+                "kalibratie": "Kalibratie"
+            },
+            "control_overrides": {
+                "Negatief": {
+                    "expression": "sample / kalibratie",
+                    "response_scale": "blank_corrected"
+                },
+                "Positief": {
+                    "expression": "sample / kalibratie",
+                    "response_scale": "blank_corrected"
+                }
+            },
+            "response_scale": "blank_corrected"
+        },
+        "result": {
+            "label": "Ratio"
+        },
+        "report": {
+            "result_decimals": 1,
+            "extinction_decimals": 3,
+            "calibration_decimals": 1,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "show_result_cv": true
+        },
+        "controls": {
+            "Negatief": {},
+            "Kalibratie": {},
+            "Positief": {}
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Negatief": {
+                        "extinction": {
+                            "max": 0.25,
+                            "response_scale": "blank_corrected"
+                        },
+                        "result": {
+                            "max": 0.9
+                        }
+                    },
+                    "Kalibratie": {
+                        "extinction": {
+                            "min": 0.3,
+                            "response_scale": "blank_corrected"
+                        }
+                    },
+                    "Positief": {
+                        "extinction": {
+                            "min": 0.5,
+                            "response_scale": "blank_corrected"
+                        },
+                        "result": {
+                            "min": 1.25
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.2,
+                        "response_scale": "raw"
+                    }
+                }
+            }
+        }
+    }
+}

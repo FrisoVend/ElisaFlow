@@ -1,0 +1,2 @@
+# Install the package and desktop UI dependencies from pyproject.toml.
+-e .[ui]

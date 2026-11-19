@@ -1,0 +1,79 @@
+{
+    "Qkoorts_IgG.skax": {
+        "lot_number": "EQ0135",
+        "measurement": {
+            "mode": "single",
+            "reference_wavelength_nm": 620
+        },
+        "calculation": {
+            "method": "calibration",
+            "fit_model": "4pl",
+            "weighting_exponent": 0.0,
+            "parameters": {
+                "A": -0.0014,
+                "B": 1.009,
+                "C": 90.378,
+                "D": 2.083
+            },
+            "concentration_range": [
+                0.0,
+                500.0
+            ],
+            "preprocessing": {
+                "expression": "sample * (0.86 / standaard)",
+                "references": {
+                    "standaard": "Standaard"
+                }
+            },
+            "response_scale": "blank_corrected"
+        },
+        "result": {
+            "label": "Conc",
+            "unit": "U/ml"
+        },
+        "report": {
+            "result_decimals": 1,
+            "extinction_decimals": 3,
+            "calibration_decimals": 1,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "show_result_cv": true
+        },
+        "controls": {
+            "Referentie": {
+                "lot_number": "CQ0030"
+            }
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Negatief": {
+                        "result": {
+                            "max": 20.0
+                        }
+                    },
+                    "Standaard": {
+                        "extinction": {
+                            "min": 0.43,
+                            "max": 1.46,
+                            "response_scale": "blank_corrected"
+                        }
+                    },
+                    "Referentie": {
+                        "result": {
+                            "min": 29.5,
+                            "max": 117.0
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.25,
+                        "response_scale": "raw"
+                    }
+                }
+            }
+        }
+    }
+}

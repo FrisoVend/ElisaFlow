@@ -1,0 +1,9 @@
+# Paths are resolved relative to this file.
+[paths]
+protocols = "protocols"
+configs = "configs"
+results = "resultaten"
+
+# Store only the location here; the salted password hash stays in a separate file.
+[access_control]
+password_file = ".secrets/assay-editor.hash"

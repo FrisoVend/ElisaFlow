@@ -1,0 +1,58 @@
+{
+    "Hib_IgG.skax": {
+        "lot_number": "541651",
+        "measurement": {
+            "mode": "single"
+        },
+        "calculation": {
+            "method": "calibration",
+            "fit_model": "quadratic",
+            "weighting_exponent": 2.0,
+            "response_scale": "raw"
+        },
+        "result": {
+            "label": "Conc",
+            "unit": "µg/mL"
+        },
+        "controls": {
+            "Hoog": {
+                "lot_number": "554085"
+            },
+            "Laag": {
+                "lot_number": "554086"
+            }
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Hoog": {
+                        "result": {
+                            "min": 2.42,
+                            "max": 4.03
+                        }
+                    },
+                    "Laag": {
+                        "result": {
+                            "min": 0.442,
+                            "max": 0.917
+                        }
+                    }
+                },
+                "blank": {
+                    "extinction": {
+                        "max": 0.2,
+                        "response_scale": "raw"
+                    }
+                }
+            }
+        },
+        "report": {
+            "extinction_decimals": 3,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 30.0,
+            "recovery_warning_percent": 20.0,
+            "result_decimals": 2,
+            "calibration_decimals": 2
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "test_ZnT8_as.skax": {
+        "lot_number": "FZTE196",
+        "measurement": {
+            "mode": "switch_on_concentration",
+            "preferred_wavelength_nm": 450,
+            "cutoff_concentration": 100.0,
+            "saturation": {
+                "450": {
+                    "mode": "calculate",
+                    "source_wavelength_nm": 405,
+                    "slope": 3.46,
+                    "intercept": 0.0
+                }
+            }
+        },
+        "calculation": {
+            "method": "calibration",
+            "wavelengths": {
+                "405": {
+                    "fit_model": "4pl",
+                    "weighting_exponent": 0.0,
+                    "response_scale": "raw"
+                },
+                "450": {
+                    "fit_model": "4pl",
+                    "weighting_exponent": 2.0,
+                    "response_scale": "raw"
+                }
+            },
+            "concentration_range": [
+                10.0,
+                2000.0
+            ]
+        },
+        "result": {
+            "label": "Conc",
+            "unit": "U/ml"
+        },
+        "report": {
+            "result_decimals": 1,
+            "extinction_decimals": 3,
+            "calibration_decimals": 1,
+            "percentage_decimals": 1,
+            "cv_warning_percent": 20.0,
+            "recovery_warning_percent": 20.0,
+            "show_result_cv": true
+        },
+        "validation": {
+            "result": {
+                "controls": {
+                    "Controle1": {
+                        "result": {
+                            "min": 30.0,
+                            "max": 88.0
+                        }
+                    },
+                    "Controle2": {
+                        "result": {
+                            "min": 90.0,
+                            "max": 270.0
+                        }
+                    }
+                }
+            },
+            "wavelengths": {
+                "450": {
+                    "blank": {
+                        "extinction": {
+                            "max": 0.2,
+                            "response_scale": "raw"
+                        }
+                    },
+                    "standards": {
+                        "500.0": {
+                            "extinction": {
+                                "min": 2.0,
+                                "response_scale": "blank_corrected"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
