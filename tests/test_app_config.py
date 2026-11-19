@@ -34,7 +34,7 @@ class ApplicationSettingsTests(unittest.TestCase):
 
     def test_frozen_configuration_is_found_beside_executable(self) -> None:
         with TemporaryDirectory() as temporary:
-            directory = Path(temporary)
+            directory = Path(temporary).resolve()
             (directory / "app.toml").write_text('[paths]\nresults = "exports"\n', encoding="utf-8")
             with (
                 patch("elisaflow.configuration.application.sys.frozen", True, create=True),
@@ -48,7 +48,7 @@ class ApplicationSettingsTests(unittest.TestCase):
 
     def test_frozen_configuration_ignores_local_overrides(self) -> None:
         with TemporaryDirectory() as temporary:
-            directory = Path(temporary)
+            directory = Path(temporary).resolve()
             local = directory / "app.local.toml"
             local.write_text('not valid TOML = [', encoding="utf-8")
             (directory / "app.toml").write_text("[paths]\n", encoding="utf-8")
@@ -62,7 +62,7 @@ class ApplicationSettingsTests(unittest.TestCase):
 
     def test_source_configuration_uses_working_directory(self) -> None:
         with TemporaryDirectory() as temporary:
-            directory = Path(temporary)
+            directory = Path(temporary).resolve()
             with (
                 patch("elisaflow.configuration.application.sys.frozen", False, create=True),
                 patch("elisaflow.configuration.application.Path.cwd", return_value=directory),
@@ -76,7 +76,7 @@ class ApplicationSettingsTests(unittest.TestCase):
 
     def test_missing_app_toml_does_not_fall_back_to_a_local_file(self) -> None:
         with TemporaryDirectory() as temporary:
-            directory = Path(temporary)
+            directory = Path(temporary).resolve()
             (directory / "app.local.toml").write_text("[paths]\n", encoding="utf-8")
             for frozen in (False, True):
                 with (

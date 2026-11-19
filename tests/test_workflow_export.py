@@ -22,7 +22,7 @@ class WorkflowTests(unittest.TestCase):
     def setUp(self):
         temporary = TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.directory = Path(temporary.name)
+        self.directory = Path(temporary.name).resolve()
         self.config = ApplicationSettings(
             self.directory / "protocols", self.directory / "configs", self.directory / "results", self.directory / "editor.hash",
         )

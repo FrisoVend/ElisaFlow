@@ -21,7 +21,7 @@ class SavedExperimentTests(unittest.TestCase):
     def setUp(self):
         temporary = TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.directory = Path(temporary.name)
+        self.directory = Path(temporary.name).resolve()
         self.folder = self.directory / "saved experiment"
         self.folder.mkdir()
         self.config = ApplicationSettings(

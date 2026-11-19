@@ -45,7 +45,7 @@ class MainWindowTests(unittest.TestCase):
     def setUp(self) -> None:
         temporary = TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        directory = Path(temporary.name)
+        directory = Path(temporary.name).resolve()
         self.config = ApplicationSettings(*(directory / name for name in ("protocols", "configs", "results", "editor.hash")))
         self.assays = Mock(spec=AssayManagement)
         self.assays.list_assays.return_value = ("assay.skax",)

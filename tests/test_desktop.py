@@ -27,7 +27,7 @@ class ProtocolDirectoryFixture:
     def setUp(self) -> None:
         temporary = TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.directory = Path(temporary.name)
+        self.directory = Path(temporary.name).resolve()
         self.first = self.directory / "Alpha.skax"
         self.second = self.directory / "beta.SKAX"
         self.first.write_bytes(b"protocol one")
